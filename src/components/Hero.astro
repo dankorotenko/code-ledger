@@ -6,12 +6,12 @@ import arrow from "../assets/arrow.svg";
 ---
 
 <section class="relative">
-  <Header client:only />
+  <Header client:load />
   <Image
     src={mainBlob}
     alt="blob"
     width="940"
-    height="900"
+    height="940"
     class="absolute left-1/2 -translate-x-1/2 z-0 top-0 md:-top-16 lg:-top-20 w-[375px] h-[378px] md:w-[731px] md:h-[737px] lg:w-[940px] lg:h-[900px]"
     loading="eager"
   />
