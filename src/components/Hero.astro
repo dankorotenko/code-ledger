@@ -1,27 +1,31 @@
 ---
-import Header from "./Header.astro";
+import Header from "./Header";
 import { Image } from "astro:assets";
 import mainBlob from "../assets/main_blob.png";
 import arrow from "../assets/arrow.svg";
 ---
 
 <section class="relative">
-  <Header />
+  <Header client:only />
   <Image
     src={mainBlob}
     alt="blob"
     width="940"
     height="900"
-    class="absolute left-1/2 -translate-x-1/2 -top-20 z-0"
+    class="absolute left-1/2 -translate-x-1/2 z-0 top-0 md:-top-16 lg:-top-20 w-[375px] h-[378px] md:w-[731px] md:h-[737px] lg:w-[940px] lg:h-[900px]"
     loading="eager"
   />
   <div
-    class="max-w-[1140px] mx-auto flex flex-col pt-48 gap-6 relative z-[1] items-center"
+    class="w-full px-2.5 md:px-5 lg:px-10 xl:px-0 xl:max-w-[1140px] mx-auto flex flex-col pt-28 md:pt-32 xl:pt-48 gap-5 md:gap-6 relative z-[1] items-center"
   >
-    <h1 class="font-mont text-8xl text-center font-normal text-text">
+    <h1
+      class="font-mont text-4xl md:text-6xl lg:text-8xl text-center font-normal text-text"
+    >
       [ MOVE BEYOND ]
     </h1>
-    <h2 class="font-inter text-3xl text-center font-medium text-text mb-36">
+    <h2
+      class="font-inter text-base md:text-2xl lg:text-3xl text-center font-medium text-text mb-32 md:mb-48 lg:mb-40"
+    >
       Unleash Your Vision on Blockchain.
     </h2>
     <Image src={arrow} alt="arrow" width="60" height="60" loading="eager" />

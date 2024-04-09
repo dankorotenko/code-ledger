@@ -7,27 +7,35 @@ import Medium from "./Icons/Medium";
 import Github from "./Icons/Github";
 ---
 
-<footer class="max-w-[1140px] mx-auto">
+<footer class="w-full px-2.5 md:px-5 lg:px-10 xl:px-0 xl:max-w-[1140px] mx-auto">
   <div class="line w-full"></div>
-  <div class="my-[38px] flex justify-between">
-    <div class="flex gap-[18px] items-center">
+  <div class="pt-[90px] pb-3.5 sm:py-[38px] flex flex-col-reverse sm:flex-row justify-between gap-[60px] sm:gap-0">
+    <div class="flex flex-col sm:flex-row gap-[18px] items-center">
       <Image src={logo} alt="Code & Ledger Logo" width="59" height="24" />
       <span class="font-inter font-normal text-[#787CAC] text-sm"
         >Copyright 2024 © Code & Ledger</span
       >
     </div>
-    <div class="flex items-center gap-6">
-      <a href="/" class="text-text hover:text-textAccent transition-all"
-        ><LinkedIn /></a
+    <div class="flex items-center gap-6 justify-center sm:justify-normal">
+      <a
+        href="/"
+        class="text-text hover:text-textAccent transition-all"
+        aria-label="Linked In"><LinkedIn /></a
       >
-      <a href="/" class="text-text hover:text-textAccent transition-all"
-        ><Twitter /></a
+      <a
+        href="/"
+        class="text-text hover:text-textAccent transition-all"
+        aria-label="Twitter"><Twitter /></a
       >
-      <a href="/" class="text-text hover:text-textAccent transition-all"
-        ><Medium /></a
+      <a
+        href="/"
+        class="text-text hover:text-textAccent transition-all"
+        aria-label="Medium"><Medium /></a
       >
-      <a href="/" class="text-text hover:text-textAccent transition-all"
-        ><Github /></a
+      <a
+        href="/"
+        class="text-text hover:text-textAccent transition-all"
+        aria-label="Github"><Github /></a
       >
     </div>
   </div>
@@ -44,4 +52,3 @@ import Github from "./Icons/Github";
     );
   }
 </style>
-./Icons/LinkedIn.jsx
