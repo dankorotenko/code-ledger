@@ -1,0 +1,29 @@
+---
+import Header from "./Header.astro";
+import { Image } from "astro:assets";
+import mainBlob from "../assets/main_blob.png";
+import arrow from "../assets/arrow.svg";
+---
+
+<section class="relative">
+  <Header />
+  <Image
+    src={mainBlob}
+    alt="blob"
+    width="940"
+    height="900"
+    class="absolute left-1/2 -translate-x-1/2 -top-20 z-0"
+    loading="eager"
+  />
+  <div
+    class="max-w-[1140px] mx-auto flex flex-col pt-48 gap-6 relative z-[1] items-center"
+  >
+    <h1 class="font-mont text-8xl text-center font-normal text-text">
+      [ MOVE BEYOND ]
+    </h1>
+    <h2 class="font-inter text-3xl text-center font-medium text-text mb-36">
+      Unleash Your Vision on Blockchain.
+    </h2>
+    <Image src={arrow} alt="arrow" width="60" height="60" loading="eager" />
+  </div>
+</section>

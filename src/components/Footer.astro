@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.svg";
+import LinkedIn from "./Icons/LinkedIn";
+import Twitter from "./Icons/Twiiter";
+import Medium from "./Icons/Medium";
+import Github from "./Icons/Github";
+---
+
+<footer class="max-w-[1140px] mx-auto">
+  <div class="line w-full"></div>
+  <div class="my-[38px] flex justify-between">
+    <div class="flex gap-[18px] items-center">
+      <Image src={logo} alt="Code & Ledger Logo" width="59" height="24" />
+      <span class="font-inter font-normal text-[#787CAC] text-sm"
+        >Copyright 2024 © Code & Ledger</span
+      >
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="/" class="text-text hover:text-textAccent transition-all"
+        ><LinkedIn /></a
+      >
+      <a href="/" class="text-text hover:text-textAccent transition-all"
+        ><Twitter /></a
+      >
+      <a href="/" class="text-text hover:text-textAccent transition-all"
+        ><Medium /></a
+      >
+      <a href="/" class="text-text hover:text-textAccent transition-all"
+        ><Github /></a
+      >
+    </div>
+  </div>
+</footer>
+
+<style>
+  .line {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(28, 34, 62, 0) 0%,
+      #4a5ba4 50%,
+      rgba(28, 34, 62, 0) 100%
+    );
+  }
+</style>
+./Icons/LinkedIn.jsx

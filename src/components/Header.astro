@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.svg";
+---
+
+<header class="max-w-[1140px] mx-auto flex justify-between items-center py-10 relative z-[1]">
+  <Image
+    src={logo}
+    alt="Code & Ledger Logo"
+    width="100"
+    height="40"
+    loading="eager"
+  />
+  <nav class="font-inter flex gap-10">
+    <a
+      href="/#commitment"
+      class="text-textAccent text-sm hover:text-text transition-all"
+      >Commitment</a
+    >
+    <a
+      href="/#about"
+      class="text-textAccent text-sm hover:text-text transition-all">About</a
+    >
+    <a
+      href="/#docs"
+      class="text-textAccent text-sm hover:text-text transition-all">Docs</a
+    >
+    <a href="/" class="text-textAccent text-sm hover:text-text transition-all"
+      >Connect</a
+    >
+  </nav>
+</header>
