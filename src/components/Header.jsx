@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import logo from "../assets/logo.svg";
 import burger from "../assets/burger.svg";
 import cross from "../assets/cross.svg";
 import mainBlob from "../assets/main_blob.png";
 import Envelope from "./Icons/Envelope";
 import Telegram from "./Icons/Telegram";
+import ArrowRight from "./Icons/ArrowRight";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isConnectOpen, setIsConnectOpen] = useState(false);
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -26,7 +28,7 @@ const Header = () => {
         loading="eager"
         className="w-[63px] h-[25px] md:w-[100px] md:h-[40px]"
       />
-      <nav className="font-inter gap-10 hidden sm:flex ">
+      <nav className="relative font-inter gap-10 hidden sm:flex ">
         <a
           href="/#commitment"
           className="text-textAccent text-sm hover:text-text transition-all"
@@ -40,17 +42,43 @@ const Header = () => {
           About
         </a>
         <a
-          href="/#docs"
+          href="https://codeandledger.gitbook.io/code-and-ledger/"
+          target="_blank"
           className="text-textAccent text-sm hover:text-text transition-all"
         >
           Docs
         </a>
-        <a
-          href="/"
-          className="text-textAccent text-sm hover:text-text transition-all"
+        <div
+          className="text-textAccent text-sm hover:text-text transition-all cursor-pointer"
+          onClick={() => setIsConnectOpen(!isConnectOpen)}
         >
           Connect
-        </a>
+        </div>
+        {isConnectOpen && (
+          <div className="absolute rounded-[10px] bg-gradient top-8 right-0 p-[1px]">
+            <div className="rounded-[10px] p-7 bg-[#050C31] flex flex-col gap-4">
+              <a
+                href="mailto:aladeen@codeandledger.com"
+                aria-label="Mail"
+                className="flex items-center gap-2 text-textAccent hover:text-text"
+              >
+                <Envelope className="flex-1" />
+                <span className="flex-[3]">Mail</span>
+                <ArrowRight className="flex-1" />
+              </a>
+              <a
+                href="https://t.me/m/xXHWlBJGYTQ0"
+                target="_blank"
+                aria-label="Telegram"
+                className="flex items-center gap-2 text-textAccent hover:text-text"
+              >
+                <Telegram className="flex-1" />
+                <span className="flex-[3]">Telegram</span>
+                <ArrowRight className="flex-1" />
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
       <button
         className="flex items-center justify-center sm:hidden"
@@ -84,7 +112,8 @@ const Header = () => {
               About
             </a>
             <a
-              href="/#docs"
+              href="https://codeandledger.gitbook.io/code-and-ledger/"
+              target="_blank"
               className="text-textAccent text-xl hover:text-text transition-all font-light"
               onClick={handleOpen}
             >
@@ -94,14 +123,13 @@ const Header = () => {
             <a
               href="/"
               className="text-textAccent text-xl hover:text-text transition-all font-light"
-              onClick={handleOpen}
             >
               Connect
             </a>
           </div>
           <div className="flex gap-4 justify-center">
             <a
-              href="/"
+              href="mailto:aladeen@codeandledger.com"
               className="flex flex-col gap-2 text-textAccent flex-1 items-center"
               aria-label="Mail"
             >
@@ -109,9 +137,10 @@ const Header = () => {
               <span className="font-inter font-light text-base">Mail</span>
             </a>
             <a
-              href="/"
-              className="flex flex-col gap-2 text-textAccent flex-1 items-center"
+              href="https://t.me/m/xXHWlBJGYTQ0"
+              target="_blank"
               aria-label="Telegram"
+              className="flex flex-col gap-2 text-textAccent flex-1 items-center"
             >
               <Telegram />
               <span className="font-inter font-light text-base">Telegram</span>
@@ -136,5 +165,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;
