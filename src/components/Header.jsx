@@ -88,7 +88,7 @@ const Header = () => {
         <img src={burger.src} alt="burger" width={19.5} height={7.5} />
       </button>
       {isOpen && (
-        <div className="absolute top-0 left-0 h-svh w-full bg-[#050C31] z-20 pt-44">
+        <div className="absolute top-0 left-0 h-svh w-full bg-[#050C31] z-20 pt-44 overflow-hidden">
           <img
             src={logo.src}
             alt="Code & Ledger Logo"
