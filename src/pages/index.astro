@@ -1,15 +1,18 @@
 ---
-import Commitment from "../components/Commitment.astro";
-import Hero from "../components/Hero.astro";
-import Proof from "../components/Proof.astro";
+// import Commitment from "../components/Commitment.astro";
+// import Hero from "../components/Hero.astro";
+// import Proof from "../components/Proof.astro";
+import Commitment from "../components/Commitment";
+import Hero from "../components/Hero";
+import Proof from '../components/Proof'
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Code & Ledger">
-  <Hero />
-  <Commitment />
-  <Proof />
+  <Hero client:only />
+  <Commitment client:only />
+  <Proof client:only />
   <Footer />
 </Layout>
 
